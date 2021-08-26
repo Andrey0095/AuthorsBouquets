@@ -1,0 +1,213 @@
+:root {
+    --text-color: #AE7C78;
+    --white-text-color: #FFF;
+    --background-color: #E5E5E5;
+    --button-icon-background-color: #D89999;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+
+.page-body {
+    font-family: 'Montserrat', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--text-color);
+    font-style: normal;
+}
+
+.header-menu a {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--text-color);
+    line-height: 19px;
+}
+
+.header-menu-item {
+    list-style-type: none;
+}
+
+.authors-bouquets-italic {
+    font-style: italic;
+}
+
+.authors-bouquets-title {
+    font-family: Playfair Display, serif;
+    font-size: 44px;
+    font-style: normal;
+    line-height: 59px;
+}
+
+.authors-bouquets-original {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+}
+
+.view-catalog {
+    line-height: 20px;
+}
+
+.authors-bouquets-section {
+    font-size: 44px;
+}
+
+.view-catalog {
+    color: var(--white-text-color);
+    background-color: var(--button-icon-background-color);
+}
+
+.features-blocks {
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.popular-bouquets-title {
+    font-family: Playfair Display, serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.popular-bouquets-name,
+.popular-bouquets-price {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.popular-bouquets-text {
+    line-height: 20px;
+}
+
+.popular-bouquets-order-button {
+    color: var(--white-text-color);
+    background-color: var(--button-icon-background-color);
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.bouquets-catalog-title {
+    font-family: Playfair Display, serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+    color: var(--white-text-color);
+}
+
+.bouquets-catalog {
+    text-decoration: none;
+}
+
+.bouquets-catalog-text {
+    line-height: 20px;
+}
+
+.bouquets-catalog a {
+    text-decoration: none;
+    color: var(--white-text-color);
+}
+
+.discount-title {
+    font-family: Playfair Display, serif;
+    font-size: 44px;
+    line-height: 59px;
+    font-weight: 400;
+}
+
+.discount-block-text {
+    background-color: var(--text-color);
+    color: var(--white-text-color);
+}
+
+.discount-text {
+    font-size: 24px;
+    line-height: 29px;
+
+}
+
+.four-steps-title {
+    font-family: Playfair Display, serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.four-steps-list-item {
+    list-style: none;
+}
+
+.four-steps-item-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.news-title {
+    font-family: Playfair Display, serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.news-text {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.news-list>li {
+    list-style: none;
+}
+
+.reviews-title {
+    font-family: Playfair Display, serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.reviews-text  >cite {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.map-title {
+    font-family: Playfair Display, serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+}
+.map-contacts-item {
+    list-style: none;
+}
+.map-contacts-item a, .map-contacts-item > p:nth-child(2){
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+.page-footer {
+    background-color: var(--text-color);
+}
+.footer-menu-item a{
+    text-decoration: none;
+    color: var(--white-text-color);
+    list-style: none;
+}
+.footer-icon-list-item, .footer-menu-item {
+    list-style: none;
+}
