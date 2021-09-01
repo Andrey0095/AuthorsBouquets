@@ -2,6 +2,7 @@
     --text-color: #AE7C78;
     --white-text-color: #FFF;
     --button-icon-background-color: #D89999;
+    --map-contacts-block-background: #F7FAFC;
 }
 
 .visually-hidden {
@@ -17,25 +18,87 @@
     overflow: hidden;
 }
 
+.header-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.container-second {
+    width: 794px;
+    margin: 0 auto;
+    padding: 0 203px;
+}
 
 .page-body {
-    font-family: 'Montserrat', serif;
+    font-family: "Montserrat", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
+    font-style: normal;
     line-height: 19px;
     color: var(--text-color);
-    font-style: normal;
+}
+
+.page-header {
+    margin-top: 26px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 20px;
+}
+
+.header-logo-image {
+    position: absolute;
+}
+
+.header-logo-link {
+    display: grid;
+    position: relative;
+    justify-items: center;
+    top: -6px;
 }
 
 .header-menu a {
     text-decoration: none;
     list-style-type: none;
-    color: var(--text-color);
     line-height: 19px;
+    margin: 0;
+    color: var(--text-color);
 }
 
 .header-menu-item {
+    align-items: center;
     list-style-type: none;
+}
+
+.header-menu-item:nth-child(4) {
+    width: 100px;
+}
+
+.authors-bouquets {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 81px;
+    margin-bottom: 48px;
+}
+
+.authors-bouquets-block-text {
+    display: flex;
+    flex-direction: column;
 }
 
 .authors-bouquets-italic {
@@ -43,20 +106,37 @@
 }
 
 .authors-bouquets-title {
-    font-family: Playfair Display, serif;
+    font-family: "Playfair Display", "Times New Roman", serif;
     font-size: 44px;
     font-style: normal;
     line-height: 59px;
-}
-
-.authors-bouquets-original {
-    font-size: 24px;
-    line-height: 29px;
+    margin: 0;
+    padding: 0;
+    margin-top: -1px;
     font-weight: 400;
 }
 
+.authors-bouquets-original {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    margin-bottom: 64px;
+}
+
 .view-catalog {
+    text-align: center;
+    text-decoration: none;
+    width: 147px;
+    padding: 30px 69px 30px 70px;
+    margin: 0;
     line-height: 20px;
+    border: 0;
+    border-radius: 40px;
+}
+
+.bouquet-of-tulips {
+    margin-top: 70px;
 }
 
 .authors-bouquets-section {
@@ -68,23 +148,88 @@
     background-color: var(--button-icon-background-color);
 }
 
+.benefits {
+    margin-bottom: 80px;
+}
+
+.benefits-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+}
+
+.features-blocks {
+    display: flex;
+    flex-direction: column;
+    margin-left: 90px;
+}
+
+.features-blocks dd {
+    margin: 0;
+}
+
+.features-blocks-car::before,
+.features-blocks-flowers::before,
+.features-blocks-photo::before {
+    content: "";
+    width: 82px;
+    height: 52px;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.features-blocks-car::before {
+    left: 0px;
+    background-image: url("../img/svg/delivery.svg");
+}
+
+.features-blocks-flowers::before {
+    left: 436px;
+    background-image: url("../img/svg/flowers.svg");
+}
+
+.features-blocks-photo::before {
+    left: 836px;
+    background-image: url("../img/svg/photo.svg");
+}
+
 .features-blocks {
     font-weight: 500;
     line-height: 20px;
 }
 
+.popular-bouquets {
+    display: grid;
+    grid-template-rows: 84px 1fr 48px;
+    grid-template-columns: 1fr 1fr;
+}
+
 .popular-bouquets-title {
-    font-family: Playfair Display, serif;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 48px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.popular-bouquets-buttons {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.popular-bouquets-button-left,
+.popular-bouquets-button-right {
+    background: none;
+    border: 0;
+    margin-bottom: 73px;
+}
+
+.popular-bouquets {
+    margin-bottom: 73px;
 }
 
 .popular-bouquets-name,
 .popular-bouquets-price {
-    font-size: 24px;
     font-weight: 500;
-    line-height: 29px;
 }
 
 .popular-bouquets-text {
@@ -92,20 +237,91 @@
 }
 
 .popular-bouquets-order-button {
-    color: var(--white-text-color);
-    background-color: var(--button-icon-background-color);
-    font-family: Montserrat;
+    font-family: "Montserrat", "Arial", sans-serif;
     font-size: 16px;
     line-height: 20px;
+    border: 0;
+    border-radius: 40px;
+    height: 80px;
+    width: 285px;
+    color: var(--white-text-color);
+    background-color: var(--button-icon-background-color);
+}
+
+.bouquets-catalog {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 19px
+}
+
+.bouquets-catalog article {
+    width: 388px;
+    height: 442px;
+}
+
+.bouquets-catalog-link {
+    display: block;
+    margin-top: 183px;
+    z-index: 10000;
+}
+
+.bouquets-catalog {
+    margin-bottom: 80px;
+}
+
+.bouquets-catalog-wedding {
+    background-image: url("../img/jpg/bridal-bouquets.jpg");
+    z-index: -2;
+}
+
+.bouquets-catalog-wedding::before {
+    width: 388px;
+    height: 442px;
+    position: absolute;
+    background-color: var(--text-color);
+    content: "";
+    border-radius: 10px;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.bouquets-catalog-peonies {
+    background-image: url("../img/jpg/bouquets-with-peonies.jpg");
+    z-index: -2;
+}
+
+.bouquets-catalog-peonies::before {
+    width: 388px;
+    height: 442px;
+    position: absolute;
+    background-color: var(--text-color);
+    content: "";
+    border-radius: 10px;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.bouquets-catalog-select {
+    background-image: url("../img/jpg/choose-a-bouquet.jpg");
+    z-index: -2;
+    margin: 0;
+}
+
+.bouquets-catalog-select::before {
+    width: 388px;
+    height: 442px;
+    position: absolute;
+    background-color: var(--text-color);
+    content: "";
+    border-radius: 10px;
+    opacity: 0.6;
+    z-index: -1;
 }
 
 .bouquets-catalog-title {
-    font-family: Playfair Display, serif;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 48px;
     letter-spacing: 0.02em;
     color: var(--white-text-color);
+    text-align: center;
 }
 
 .bouquets-catalog {
@@ -114,6 +330,7 @@
 
 .bouquets-catalog-text {
     line-height: 20px;
+    text-align: center;
 }
 
 .bouquets-catalog a {
@@ -121,11 +338,24 @@
     color: var(--white-text-color);
 }
 
+.discount {
+    display: grid;
+    grid-template-columns: 610px 391px;
+    margin-bottom: 80px;
+}
+
 .discount-title {
-    font-family: Playfair Display, serif;
+    font-family: "Playfair Display", "Times New Roman", serif;
     font-size: 44px;
     line-height: 59px;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.discount-title-block {
+    margin-top: 40px;
+    margin-left: 102px;
 }
 
 .discount-block-text {
@@ -134,20 +364,62 @@
 }
 
 .discount-text {
-    font-size: 24px;
-    line-height: 29px;
-
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    margin-left: 102px;
+    width: 387px;
 }
 
-.four-steps-title {
-    font-family: Playfair Display, serif;
+.discount-text,
+.news-text,
+.authors-bouquets-original,
+.popular-bouquets-name,
+.popular-bouquets-price {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.four-steps-title,
+.news-title,
+.reviews-title,
+.map-title,
+.bouquets-catalog-title,
+.popular-bouquets-title {
+    font-family: "Playfair Display", "Times New Roman", serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 48px;
 }
 
+.four-steps {
+    margin-bottom: 80px;
+}
+
+.four-steps-title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 36px;
+}
+
+.four-steps-list {
+    display: grid;
+    grid-template-columns: 285px 285px 285px 285px;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+.four-steps-list-item {
+    display: grid;
+    text-align: center;
+    grid-template-rows: 36px 1fr;
+    padding-top: 52px;
+}
+
 .four-steps-list-item {
     list-style: none;
+    position: relative;
 }
 
 .four-steps-item-title {
@@ -156,57 +428,191 @@
     line-height: 20px;
 }
 
-.news-title {
-    font-family: Playfair Display, serif;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 48px;
+.four-steps-list-item:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 52px;
+    left: 110px;
+    top: 0px;
+    background-image: url("../img/svg/order.svg");
 }
 
-.news-text {
-    font-size: 24px;
-    line-height: 29px;
+.four-steps-list-item:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    width: 37.49px;
+    height: 52px;
+    left: 124px;
+    top: 0px;
+    background-image: url("../img/svg/details.svg");
+}
+
+.four-steps-list-item:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    width: 69.93px;
+    height: 52px;
+    left: 108px;
+    top: 0px;
+    background-image: url("../img/svg/payment.svg");
+}
+
+.four-steps-list-item:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    width: 82.21px;
+    height: 52px;
+    left: 101px;
+    top: 0px;
+    background-image: url("../img/svg/delivery.svg");
+}
+
+.news {
+    display: grid;
+    grid-template-columns: 508px 692px;
+    margin-bottom: 80px;
+}
+
+.news-block {
+    width: 387px;
+}
+
+.news-block-img {
+    display: grid;
+    grid-template-columns: 295px 397px;
+    grid-template-rows: 230px 230px;
+}
+
+.img-roses {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column: 1/1;
+    margin-top: 10px;
+}
+
+.img-carnations {
+    margin-left: 10px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column: 2/2;
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    justify-items: center;
 }
 
 .news-list>li {
     list-style: none;
 }
 
-.reviews-title {
-    font-family: Playfair Display, serif;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 48px;
+.reviews {
+    border: 1px solid var(--text-color);
+    height: 308px;
+    margin-bottom: 80px;
 }
 
-.reviews-text  >cite {
+.reviews-title {
+    text-align: center;
+}
+
+.reviews-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.reviews-text {
+    text-align: center;
+    width: 300px;
+}
+
+.reviews-text>cite {
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
 }
 
-.map-title {
-    font-family: Playfair Display, serif;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 48px;
+.map-contacts {
+    position: relative;
 }
+
+.map-contacts-block {
+    position: absolute;
+    left: 222px;
+    top: 52px;
+    background-color: var(--map-contacts-block-background);
+    width: 386px;
+    height: 520px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 40px 0px #D9D9D94D;
+}
+
 .map-contacts-item {
     list-style: none;
 }
-.map-contacts-item a, .map-contacts-item > p:nth-child(2){
-    color: var(--text-color);
+
+.map-title {
+    margin-left: 35px;
+    padding: 0;
+}
+
+.map-contacts-list {
+    margin-left: 35px;
+    padding: 0;
+}
+
+.map-contacts-item a,
+.map-contacts-item>p:nth-child(2) {
     text-decoration: none;
     font-weight: 500;
+    color: var(--text-color);
 }
+
 .page-footer {
     background-color: var(--text-color);
+    height: 97px;
 }
-.footer-menu-item a{
+
+.page-footer>div {
+    display: flex;
+}
+
+.footer-menu {
+    display: flex;
+    width: 795px;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: 103px;
+}
+
+.footer-menu-item a {
     text-decoration: none;
+    list-style: none;
     color: var(--white-text-color);
+}
+
+.footer-icon-list-item,
+.footer-menu-item {
     list-style: none;
 }
-.footer-icon-list-item, .footer-menu-item {
-    list-style: none;
+
+.footer-icon-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    margin-left: 105px;
+    margin-top: 30px;
+}
+
+.page-footer-logo-link {
+    margin-top: 24px;
 }
