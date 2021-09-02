@@ -114,6 +114,8 @@
     padding: 0;
     margin-top: -1px;
     font-weight: 400;
+    display: block;
+    width: 384px;
 }
 
 .authors-bouquets-original {
@@ -261,8 +263,11 @@
 
 .bouquets-catalog-link {
     display: block;
-    margin-top: 183px;
+    padding-top: 183px;
     z-index: 10000;
+    position: absolute;
+    width: 388px;
+    height: 259px;
 }
 
 .bouquets-catalog {
@@ -271,7 +276,7 @@
 
 .bouquets-catalog-wedding {
     background-image: url("../img/jpg/bridal-bouquets.jpg");
-    z-index: -2;
+    z-index: 5;
 }
 
 .bouquets-catalog-wedding::before {
@@ -282,12 +287,12 @@
     content: "";
     border-radius: 10px;
     opacity: 0.6;
-    z-index: -1;
+    z-index: 5;
 }
 
 .bouquets-catalog-peonies {
     background-image: url("../img/jpg/bouquets-with-peonies.jpg");
-    z-index: -2;
+    z-index: 5;
 }
 
 .bouquets-catalog-peonies::before {
@@ -303,7 +308,7 @@
 
 .bouquets-catalog-select {
     background-image: url("../img/jpg/choose-a-bouquet.jpg");
-    z-index: -2;
+    z-index: 5;
     margin: 0;
 }
 
@@ -322,6 +327,8 @@
     letter-spacing: 0.02em;
     color: var(--white-text-color);
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .bouquets-catalog {
