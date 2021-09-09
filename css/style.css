@@ -45,8 +45,8 @@
 }
 
 .page-header {
-    margin-top: 26px;
-    padding-top: 22px;
+    margin-top: 25px;
+    padding-top: 21px;
     padding-bottom: 22px;
     border-top: 1px solid var(--text-color);
     border-bottom: 1px solid var(--text-color);
@@ -69,7 +69,7 @@
     display: grid;
     position: relative;
     justify-items: center;
-    top: -6px;
+    top: -5px;
 }
 
 .header-menu a {
@@ -83,17 +83,15 @@
 .header-menu-item {
     align-items: center;
     list-style-type: none;
-}
-
-.header-menu-item:nth-child(4) {
-    width: 100px;
+    margin-top: 3px;
 }
 
 .authors-bouquets {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 81px;
+    grid-template-columns: 407px 1fr 1fr;
+    margin-top: 82px;
     margin-bottom: 48px;
+    height: 462px;
 }
 
 .authors-bouquets-block-text {
@@ -112,10 +110,9 @@
     line-height: 59px;
     margin: 0;
     padding: 0;
-    margin-top: -1px;
     font-weight: 400;
     display: block;
-    width: 384px;
+    width: 387px;
 }
 
 .authors-bouquets-original {
@@ -124,34 +121,36 @@
     padding: 0;
     margin-top: 24px;
     margin-bottom: 64px;
+    width: 384px;
 }
 
 .view-catalog {
     text-align: center;
     text-decoration: none;
     width: 147px;
-    padding: 30px 69px 30px 70px;
+    padding: 31px 68px 29px 70px;
     margin: 0;
     line-height: 20px;
     border: 0;
     border-radius: 40px;
+    height: 20px;
+    display: block;
+    color: var(--white-text-color);
+    background-color: var(--button-icon-background-color);
 }
 
 .bouquet-of-tulips {
-    margin-top: 70px;
+    margin-top: auto;
+    margin-right: 20px;
 }
 
 .authors-bouquets-section {
     font-size: 44px;
 }
 
-.view-catalog {
-    color: var(--white-text-color);
-    background-color: var(--button-icon-background-color);
-}
-
 .benefits {
-    margin-bottom: 80px;
+    margin-bottom: 83px;
+    margin-left: 20px;
 }
 
 .benefits-features {
@@ -163,7 +162,19 @@
 .features-blocks {
     display: flex;
     flex-direction: column;
-    margin-left: 90px;
+    padding-left: 90px;
+}
+
+.features-blocks:nth-child(1) {
+    width: 300px;
+}
+
+.features-blocks-add {
+    margin-left: 10px;
+}
+
+.features-blocks-addd {
+    margin-left: 15px;
 }
 
 .features-blocks dd {
@@ -195,9 +206,10 @@
     background-image: url("../img/svg/photo.svg");
 }
 
-.features-blocks {
+.features-blocks>dt {
     font-weight: 500;
     line-height: 20px;
+    margin-bottom: 8px;
 }
 
 .popular-bouquets {
@@ -210,12 +222,15 @@
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
+    margin: 0;
+    padding: 0;
 }
 
 .popular-bouquets-buttons {
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
+    margin-top: 15px;
 }
 
 .popular-bouquets-button-left,
@@ -226,7 +241,7 @@
 }
 
 .popular-bouquets {
-    margin-bottom: 73px;
+    margin-bottom: 56px;
 }
 
 .popular-bouquets-name,
@@ -234,8 +249,31 @@
     font-weight: 500;
 }
 
+.popular-bouquets-price {
+    margin: 0;
+    padding: 0;
+    margin-top: 26px;
+}
+
+.popular-bouquets-name {
+    margin: 0;
+    padding: 0;
+    margin-top: 28px;
+}
+
 .popular-bouquets-text {
     line-height: 20px;
+    margin: 0;
+    padding: 0;
+    margin-top: 21px;
+}
+
+.popular-bouquets-size {
+    line-height: 15px;
+    margin: 0;
+    padding: 0;
+    margin-top: 26px;
+    margin-right: 5px;
 }
 
 .popular-bouquets-order-button {
@@ -248,6 +286,14 @@
     width: 285px;
     color: var(--white-text-color);
     background-color: var(--button-icon-background-color);
+    margin: 0;
+    padding: 0;
+    margin-top: 64px;
+}
+
+.popular-bouquets-image {
+    margin-left: 10px;
+    margin-top: 1px;
 }
 
 .bouquets-catalog {
@@ -268,10 +314,69 @@
     position: absolute;
     width: 388px;
     height: 259px;
+    text-align: center;
+}
+
+.bouquets-catalog-wedding>a::before,
+.bouquets-catalog-peonies>a::before,
+.bouquets-catalog-select>a::before {
+    color: var(--white-text-color);
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 388px;
+    font-family: "Playfair Display", "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.bouquets-catalog-wedding>a::before {
+    content: "Свадебные букеты";
+}
+
+.bouquets-catalog-peonies>a::before {
+    content: "Букеты с пионами";
+}
+
+.bouquets-catalog-select>a::before {
+    content: "Выбрать букет";
 }
 
 .bouquets-catalog {
     margin-bottom: 80px;
+}
+
+.bouquets-catalog-wedding>a::after,
+.bouquets-catalog-peonies>a::after,
+.bouquets-catalog-select>a::after {
+    color: var(--white-text-color);
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 388px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.bouquets-catalog-wedding>a::after {
+    content: "Букеты для невест";
+    margin-top: 7px;
+}
+
+.bouquets-catalog-peonies>a::after {
+    content: "Букеты с сезонными пионами";
+    margin-top: 7px;
+}
+
+.bouquets-catalog-select>a::after {
+    content: "Букеты в ассортименте";
+    margin-top: 8px;
 }
 
 .bouquets-catalog-wedding {
@@ -323,13 +428,6 @@
     z-index: -1;
 }
 
-.bouquets-catalog-title {
-    letter-spacing: 0.02em;
-    color: var(--white-text-color);
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
 
 .bouquets-catalog {
     text-decoration: none;
@@ -391,7 +489,6 @@
 .news-title,
 .reviews-title,
 .map-title,
-.bouquets-catalog-title,
 .popular-bouquets-title {
     font-family: "Playfair Display", "Times New Roman", serif;
     font-size: 36px;
@@ -399,8 +496,23 @@
     line-height: 48px;
 }
 
+.news-title {
+    margin: 0;
+    padding: 0;
+    margin-top: 71px;
+}
+
+.news-text {
+    margin: 0;
+    padding: 0;
+    margin-top: 39px;
+    margin-bottom: 42px;
+}
+
 .four-steps {
     margin-bottom: 80px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .four-steps-title {
@@ -419,26 +531,32 @@
 
 .four-steps-list-item {
     display: grid;
+    list-style: none;
+    position: relative;
     text-align: center;
     grid-template-rows: 36px 1fr;
     padding-top: 52px;
 }
 
-.four-steps-list-item {
-    list-style: none;
-    position: relative;
-}
 
 .four-steps-item-title {
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
 }
 
+.four-steps-item-text {
+    margin: 0;
+    padding: 0;
+}
+
 .four-steps-list-item:nth-child(1)::before {
     content: "";
     position: absolute;
-    width: 66px;
+    width: 69px;
     height: 52px;
     left: 110px;
     top: 0px;
@@ -448,7 +566,7 @@
 .four-steps-list-item:nth-child(2)::before {
     content: "";
     position: absolute;
-    width: 37.49px;
+    width: 37px;
     height: 52px;
     left: 124px;
     top: 0px;
@@ -458,9 +576,9 @@
 .four-steps-list-item:nth-child(3)::before {
     content: "";
     position: absolute;
-    width: 69.93px;
+    width: 67px;
     height: 52px;
-    left: 108px;
+    left: 113px;
     top: 0px;
     background-image: url("../img/svg/payment.svg");
 }
@@ -468,11 +586,16 @@
 .four-steps-list-item:nth-child(4)::before {
     content: "";
     position: absolute;
-    width: 82.21px;
+    width: 82px;
     height: 52px;
-    left: 101px;
+    left: 108px;
     top: 0px;
     background-image: url("../img/svg/delivery.svg");
+}
+
+.four-steps-list-item:nth-child(3) {
+    width: 270px;
+    padding-left: 15px;
 }
 
 .news {
@@ -522,15 +645,21 @@
     border: 1px solid var(--text-color);
     height: 308px;
     margin-bottom: 80px;
+    padding: 0;
 }
 
 .reviews-title {
     text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    margin-bottom: 13px;
 }
 
 .reviews-block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
 }
 
 .reviews-text {
@@ -550,8 +679,8 @@
 
 .map-contacts-block {
     position: absolute;
-    left: 222px;
-    top: 52px;
+    left: 134px;
+    top: 62px;
     background-color: var(--map-contacts-block-background);
     width: 386px;
     height: 520px;
@@ -559,8 +688,24 @@
     box-shadow: 0px 4px 40px 0px #D9D9D94D;
 }
 
+.header-menu-item-specials {
+    padding-left: 45px;
+}
+
+.header-menu-item-delivery {
+    padding-left: 10px;
+}
+
+.header-menu-item-reviews {
+    padding-left: 20px;
+}
+
 .map-contacts-item {
     list-style: none;
+}
+
+.map-contacts-item p {
+    margin-top: 38px;
 }
 
 .map-title {
@@ -583,6 +728,14 @@
 .page-footer {
     background-color: var(--text-color);
     height: 97px;
+}
+
+.reviews-text:nth-child(2) {
+    padding-left: 12px;
+}
+
+.reviews-text:nth-child(3) {
+    padding-left: 22px;
 }
 
 .page-footer>div {
